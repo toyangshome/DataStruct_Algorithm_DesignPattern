@@ -22,6 +22,7 @@ public class LFUCache {
         if (!keyTable.containsKey(key)) {
             return -1;
         }
+
         Node node = keyTable.get(key);
         int val = node.val, freq = node.freq;
         freqTable.get(freq).remove(node);
